@@ -1,0 +1,43 @@
+{% extends 'Main.html' %}
+{% block content %}
+
+<br>
+
+<div class="container">
+<div class="container row">
+    <div class="col-lg-10">
+        <h3>BOOKS:</h3>
+        <div class="card card-body">
+            <table class="table table-sm">
+                <tr>
+                    <th>Book id</th>
+                    <th>Book name</th>
+                    <th>Book cost</th>
+                    <th>Book author</th>
+                    <th>Book publishdate</th>
+                    <th></th>
+                </tr>
+
+                <tr>
+                    {% for rec in records %}
+                    <tr>
+
+                        <td>{{ rec.bid}}</td>
+                        <td>{{ rec.bname}}</td>
+                        <td>{{ rec.bcost}}</td>
+                        <td>{{ rec.bauthor}}</td>
+                        <td>{{ rec.bpdate}}</td>
+
+
+                    </tr>
+                </tr>
+
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body bgcolor="#00ffff">
+<form action="{% url 'update' %}"  method="get">
+    {% csrf_token %}
+    <center>
+    <table bgcolor="gray">
+       <tr><td>Enter bid:</td><td><input type="text" name="t1" ></td></tr>
+        <tr><td>Enter bname:</td><td><input type="text" name="t2" ></td></tr>
+       <tr><td>Enter bcost:</td><td><input type="text" name="t3" ></td></tr>
+       <tr><td>Enter bauthor:</td><td><input type="text" name="t4" ></td></tr>
+       <tr><td>Enter bpdate:</td><td><input type="text" name="t5" ></td></tr>
+        <tr><td colspan="2" align="center"><input type="submit" value="update" ></td></tr>
+    </table>
+        </center>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>delete page</title>
+</head>
+<body bgcolor="gray">
+<form action="{% url 'delete' %}" method="get">
+        {% csrf_token %}
+    <center>
+    Enter Book ID:  <input type="text" name="t1"><br>
+    <input type="submit" value="delete">
+    </center>
+</form>
+</body>
+</html>
