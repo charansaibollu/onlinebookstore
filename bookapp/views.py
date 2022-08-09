@@ -11,10 +11,6 @@ from django.contrib.auth.models import User
 from django.core.mail import send_mail
 from django.conf import settings
 from django.http import HttpResponse
-import random
-import http.client
-from django.contrib.auth.decorators import login_required
-import json
 
 class HomeView(View):
     def get(self,request):
@@ -42,7 +38,8 @@ def Inser(request):
     b_cost=float(request.GET["t3"])
     b_author=request.GET["t4"]
     b_pdate=request.GET["t5"]
-    b1=Book(bid=b_id,bname=b_name,bcost=b_cost,bauthor=b_author,bpdate=b_pdate)
+    b_qnt=request.GET["t6"]
+    b1=Book(bid=b_id,bname=b_name,bcost=b_cost,bauthor=b_author,bpdate=b_pdate,quantity=b_qnt)
     b1.save()
     resp=HttpResponse("product inserted successfully")
     return resp
@@ -72,11 +69,13 @@ def Update(request):
     b_cost = float(request.GET["t3"])
     b_author = request.GET["t4"]
     b_pdate = request.GET["t5"]
+    b_qnt=request.GET["t6"]
     B=Book.objects.get(bid=b_id)
     B.bname=b_name
     B.bcost=b_cost
     B.bauthor=b_author
     B.bpdate=b_pdate
+    B.quantity=b_qnt
     B.save()
     resp = HttpResponse("product updated successfully")
     return resp
