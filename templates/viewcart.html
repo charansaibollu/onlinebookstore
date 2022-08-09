@@ -60,6 +60,7 @@
                         <th>Book cost</th>
                         <th>Book author</th>
                         <th>Book pbdate</th>
+                        <th>Book quantity</th>
                     </tr>
                     {% for book in cart.books.all %}
                     <tr>
@@ -68,6 +69,7 @@
                         <td>{{book.bcost}} </td>
                         <td>{{book.bauthor}} </td>
                         <td>{{book.bpdate}} </td>
+                        <td>{{ book.quantity }}</td>
                         <td><a class="btn btn-sm btn-info" href="{% url 'removecart' book.bid %}">remove book from cart</a> </td>
                     </tr>
                     {% endfor %}
@@ -76,5 +78,8 @@
         </div>
     </div>
 </div>
+            <marquee>
+                <h3>Copyright@onlinebookstore</h3>
+            </marquee>
     </body>
 </html>

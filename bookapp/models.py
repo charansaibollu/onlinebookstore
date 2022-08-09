@@ -9,6 +9,7 @@ class Book(models.Model):
     bcost = models.DecimalField(max_digits=10, decimal_places=2)
     bauthor = models.CharField(max_length=20)
     bpdate= models.DateField()
+    quantity=models.IntegerField()
     def __str__(self):
         return self.bname
 

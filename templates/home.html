@@ -15,6 +15,7 @@
                     <th>Book cost</th>
                     <th>Book author</th>
                     <th>Book publishdate</th>
+                    <th>Books quantity</th>
                     <th></th>
                 </tr>
 
@@ -27,6 +28,7 @@
                         <td>{{ rec.bcost}}</td>
                         <td>{{ rec.bauthor}}</td>
                         <td>{{ rec.bpdate}}</td>
+                        <td>{{ rec.quantity }}</td>
 
 
                     </tr>
@@ -34,6 +36,9 @@
 
                 {% endfor %}
             </table>
+            <marquee>
+                    <h3>Copyright@onlinebookstore</h3>
+            </marquee>
         </div>
     </div>
 
