@@ -1,16 +1,150 @@
+{% load static %}
+{% block content %}
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>About us </title>
-</head>
-<body>
-<form action="./aboutus/" method="get">
-this is online book store by charansai bollu
-    <marquee>
-        <h3>Copyright@onlinebookstore</h3>
-    </marquee>
-</form>
-</body>
+    <html>
+    <head>
+        <title> About us</title>
+        <style>
+            body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
 
-</html>
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+        </style>
+    </head>
+<div class="about-section">
+  <h1>About Us </h1>
+  <p>Our philosophy is based on information, communication and education, which we feel should be balanced out with a daily dose of knowledge, wisdom, understanding (overstanding, and innerstanding).</p>
+  <p>Our website features books from every literary genre, allowing us to appeal to any particular taste a customer may have. Can't find what you're looking for? We can order the book for you.
+
+
+
+In just a few business days, we'll get that book to you so that you can enjoy a quiet evening at home, prepare a nice gift for someone or simply use it to expand your horizons.
+
+
+
+Our experienced staff can assist you in selecting the right literature and will be glad to go that extra mile for you!</p>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="{% static 'images/charansai.jpg' %}" alt="Charan" style="width:100%">
+      <div class="container">
+        <h2>Charansai Bollu</h2>
+        <p class="title">Founder</p>
+        <p>Studied at ACE
+        Python Developer</p>
+        <p>Charan.bollu205@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="{% static 'images/rangith.jpg' %}" alt="Ranjith" style="width:100%">
+      <div class="container">
+        <h2>Ranjith</h2>
+        <p class="title">Art director</p>
+        <p>SQL Developer</p>
+        <p>padigelaranjith321@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="{% static 'images/bk_pg.jpg' %}" alt="Naveen" style="width:100%">
+      <div class="container">
+        <h2>Pilla Naveen</h2>
+        <p class="title"> As a member</p>
+        <p>Python Developer</p>
+        <p>naveenpilla@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="column">
+    <div class="card">
+      <img src="{% static 'images/bk_pg.jpg' %}" alt="Manikanta" style="width:100%">
+      <div class="container">
+        <h2>Manikanta</h2>
+        <p class="title">As a member</p>
+        <p>Python Developer</p>
+        <p>manikanta12@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+    </html>
+{% endblock %}
