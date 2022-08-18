@@ -95,7 +95,7 @@ def loginPage(request):
                 login(request, user)
                 return redirect('customerpage')
     context = {}
-    return render(request, 'Login.html', context)
+    return render(request, 'login.html', context)
 
 def registerPage(request):
     form = createuserform()
